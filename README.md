@@ -1,6 +1,6 @@
 # Musical-Chairs-FX
 This is a musical chairs program, that plays music files of format mp3, and will automatically pause them. This program is useful for people who want to play Musical Chairs and let the computer decide when to pause. This version is the most complete when compared to my other two projects, I also wrote the code with the MVC architect in mind. This is my first attempt at MVC.
-#Installing
+# Installing
 1. Either clone the repo and build the artifact or find the jar file that is located in  out\artifacts\musical_chairs_fx
 2.Once you start up the program for the first time it will request the location of where your music is stored, select the directory.
 3. Once the directory is chosen it will load up the music into the playlist you can then double click a song to begin the game
