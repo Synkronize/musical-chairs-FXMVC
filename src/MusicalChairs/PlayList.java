@@ -1,4 +1,4 @@
-package sample;
+package MusicalChairs;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import java.io.File;
@@ -11,7 +11,7 @@ import java.util.prefs.Preferences;
 /**
  * Created by Jude on 12/24/2017.
  */
-public class PlayList {
+ class PlayList {
     ObservableList<String> playList;
     File directory;
     List<String> list;
@@ -50,11 +50,11 @@ public class PlayList {
         }
 
     }
-    void addItems(String song,int index){
+    private void addItems(String song,int index){
         System.out.println(playList);
         playList.add(index,song);
     }
-    void clear(){
+    private void clear(){
        int i;
        int elementsToRemove = playList.size();
        for(i = 0; i < elementsToRemove; i++) {

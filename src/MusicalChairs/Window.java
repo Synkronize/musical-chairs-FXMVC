@@ -1,4 +1,4 @@
-package sample;
+package MusicalChairs;
 import javafx.collections.ObservableList;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -11,18 +11,18 @@ import javafx.stage.Stage;
 /**
  * Created by Jude on 12/24/2017.
  */
-public class Window {
+ class Window {
     Stage primaryStage;
-    BorderPane primaryBp = new BorderPane();
-    Scene primaryScene = new Scene(primaryBp,260,200);
-    Button play = new Button();
-    MenuBar menuBar = new MenuBar();
-    Menu menuFile = new Menu("File");
-    Menu menuSettings = new Menu("Settings");
-    MenuItem chooseDirectory = new MenuItem("Select Music Folder");
-    MenuItem setBounds = new MenuItem("Set Bounds");
-    DirectoryChooser directoryChooser = new DirectoryChooser();
-    ListView<String> playListView;
+   private BorderPane primaryBp = new BorderPane();
+   private Scene primaryScene = new Scene(primaryBp,260,200);
+   Button play = new Button();
+   private MenuBar menuBar = new MenuBar();
+   Menu menuFile = new Menu("File");
+   private Menu menuSettings = new Menu("Settings");
+   private MenuItem chooseDirectory = new MenuItem("Select Music Folder");
+   MenuItem setBounds = new MenuItem("Set Bounds");
+   private DirectoryChooser directoryChooser = new DirectoryChooser();
+   private ListView<String> playListView;
 
     Window(Stage primaryStage){
         this.primaryStage = primaryStage;
@@ -37,7 +37,6 @@ public class Window {
         return primaryStage;
     }
     void makeWindowElements(ObservableList model){
-        this.primaryStage = primaryStage;
         new Image(getClass().getResourceAsStream("Play24.gif"));
         play.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("Play24.gif"))));
         menuFile.getItems().add(chooseDirectory);

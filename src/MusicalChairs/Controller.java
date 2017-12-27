@@ -1,7 +1,6 @@
-package sample;
+package MusicalChairs;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.scene.control.DialogPane;
 import javafx.scene.input.MouseEvent;
 
 
@@ -18,7 +17,6 @@ public class Controller {
         this.musicGamePlayer = musicGamePlayer;
         this.settingsWindow = settingsWindow;
         this.settingsWindow.constructDialog();
-       // this.settingsWindow.dialogPane = new DialogPane();
         this.window.menuFile.setOnAction(new FileButtonHandler());
         window.play.setOnMouseClicked(new playHandler());
         window.setBounds.setOnAction(new settingsButtonHandler());

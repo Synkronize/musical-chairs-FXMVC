@@ -1,4 +1,4 @@
-package sample;
+package MusicalChairs;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import java.io.File;
@@ -8,8 +8,7 @@ import java.util.prefs.Preferences;
 /**
  * Created by Jude on 12/26/2017.
  */
-public class MusicGamePlayer{
-   private Media song;
+ class MusicGamePlayer{
    private MediaPlayer mediaPlayer;
    private boolean playing = false;
    private long randomNum;
@@ -25,8 +24,7 @@ public class MusicGamePlayer{
       upperVal = upperValPreferences.getInt(upperValue,upperVal);
    }
     Media getMedia(File directory, String songName){
-         song = new Media((new File(directory,songName).toURI().toString()));
-        return song;
+       return new Media((new File(directory,songName).toURI().toString()));
     }
     MediaPlayer createMediaPlayer(Media song){
         if(mediaPlayer != null && playing)
@@ -70,7 +68,7 @@ public class MusicGamePlayer{
             gameStart();
         }
     }
-    void gameStart(){
+    private void gameStart(){
         synchronized (game) {
             try {
                 generateRandomNum();
@@ -89,10 +87,10 @@ public class MusicGamePlayer{
 
         }
     }
-    void generateRandomNum(){
+   private void generateRandomNum(){
         randomNum = ThreadLocalRandom.current().nextInt(lowerVal,upperVal+1);
     }
-    void interruptWaitingThread(){
+   private void interruptWaitingThread(){
         if(game != null && game.getState().equals(Thread.State.TIMED_WAITING))
             game.interrupt();
 

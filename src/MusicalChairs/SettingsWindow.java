@@ -1,7 +1,5 @@
-package sample;
+package MusicalChairs;
 
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -14,30 +12,27 @@ import javafx.stage.Stage;
 /**
  * Created by Jude on 12/27/2017.
  */
-public class SettingsWindow {
-    Stage stage;
-    Scene scene;
-    Button Ok;
+ class SettingsWindow {
+   private Stage stage;
+   Button Ok;
     Button cancel;
     TextArea lower;
     TextArea upper;
-    Text lowerLabel;
-    Text upperLabel;
-    Text dialogError;
-    ButtonType ok = new ButtonType("Ok",ButtonBar.ButtonData.OK_DONE);
-   // Button dialogOk = new Button("ok");
-    Dialog dialog;
-    //DialogPane dialogPane;
+    private ButtonType ok = new ButtonType("Ok",ButtonBar.ButtonData.OK_DONE);
+    private Dialog dialog;
+
 
 
     SettingsWindow(){
+        Text lowerLabel;
+        Text upperLabel;
         stage = new Stage();
         stage.setTitle("Settings");
         HBox organized = new HBox();
         GridPane gridPane = new GridPane();
         gridPane.setPadding(new Insets(1,1,1,1));
         gridPane.setAlignment(Pos.CENTER);
-        scene = new Scene(gridPane,210,210);
+        Scene scene = new Scene(gridPane,210,210);
         Ok = new Button("Ok");
         cancel= new Button("Cancel");
         lowerLabel = new Text("Lower");
@@ -64,6 +59,7 @@ public class SettingsWindow {
         return stage;
     }
     void constructDialog(){
+        Text dialogError;
         dialogError = new Text("Lower or Upper cannot be less than or equal to zero.\n Lower and Upper were not changed.");
         dialog = new Dialog();
         dialog.setDialogPane(new DialogPane());
