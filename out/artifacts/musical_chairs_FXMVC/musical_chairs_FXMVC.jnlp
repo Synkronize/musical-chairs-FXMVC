@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="musical_chairs_FXMVC.jnlp">
+  <information>
+    <title>musical-chairs-FXMVC</title>
+    <vendor>Unknown</vendor>
+    <description>musical-chairs-FXMVC</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="musical_chairs_FXMVC.jar" size="18410" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="600" height="400" main-class="MusicalChairs.Main"  name="musical-chairs-FXMVC" />
+  <update check="background"/>
+</jnlp>

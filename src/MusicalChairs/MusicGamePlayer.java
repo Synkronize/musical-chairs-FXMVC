@@ -14,6 +14,7 @@ import java.util.prefs.Preferences;
    private long randomNum;
    int lowerVal = 0;
    int upperVal = 0;
+   boolean end = false;
     Preferences lowerValPreferences = Preferences.userRoot().node(getClass().getName());
     Preferences upperValPreferences = Preferences.userRoot().node(getClass().getName());
     String lowerValue = "Lower Value";
@@ -37,6 +38,7 @@ import java.util.prefs.Preferences;
         interruptWaitingThread();
         mediaPlayer.play();
         mediaPlayer.getOnPlaying();
+        mediaPlayer.setStopTime(mediaPlayer.getMedia().getDuration());
         game = new Thread(new Game());
         game.start();
     }
@@ -58,6 +60,7 @@ import java.util.prefs.Preferences;
                 playing = false;
             }
         });
+
     }
     private void handleMusicAlreadyPlaying(){
         mediaPlayer.stop();
@@ -98,4 +101,5 @@ import java.util.prefs.Preferences;
     MediaPlayer getMediaPlayer(){
         return mediaPlayer;
     }
+
 }

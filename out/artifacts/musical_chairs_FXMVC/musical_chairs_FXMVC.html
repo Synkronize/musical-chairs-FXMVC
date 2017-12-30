@@ -1,0 +1,43 @@
+<html><head>
+  <SCRIPT src="http://java.com/js/dtjava.js"></SCRIPT>
+<script>
+    function launchApplication(jnlpfile) {
+        dtjava.launch(            {
+                url : 'musical_chairs_FXMVC.jnlp'
+            },
+            {
+                javafx : '8.0+'
+            },
+            {}
+        );
+        return false;
+    }
+</script>
+
+<script>
+    function javafxEmbedmusical_chairs_FXMVC_id() {
+        dtjava.embed(
+            {
+                id : 'musical_chairs_FXMVC_id',
+                url : 'musical_chairs_FXMVC.jnlp',
+                placeholder : 'javafx-app-placeholder',
+                width : '600',
+                height : '400'
+            },
+            {
+                javafx : '8.0+'
+            },
+            {}
+        );
+    }
+    <!-- Embed FX application into web page once page is loaded -->
+    dtjava.addOnloadCallback(javafxEmbedmusical_chairs_FXMVC_id);
+</script>
+
+</head><body>
+<h2>Test page for <b>musical-chairs-FXMVC</b></h2>
+  <b>Webstart:</b> <a href='musical_chairs_FXMVC.jnlp' onclick="return launchApplication('musical_chairs_FXMVC.jnlp');">click to launch this app as webstart</a><br><hr><br>
+
+  <!-- Applet will be inserted here -->
+  <div id='javafx-app-placeholder'></div>
+</body></html>

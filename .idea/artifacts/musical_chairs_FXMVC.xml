@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="musical-chairs-FXMVC">
+    <output-path>$PROJECT_DIR$/out/artifacts/musical_chairs_FXMVC</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="MusicalChairs.Main" />
+        <option name="description" value="" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="title" value="" />
+        <option name="vendor" value="" />
+        <option name="version" value="" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="musical_chairs_FXMVC.jar">
+        <element id="module-output" name="musical-chairs-FXMVC" />
+      </element>
+    </root>
+  </artifact>
+</component>

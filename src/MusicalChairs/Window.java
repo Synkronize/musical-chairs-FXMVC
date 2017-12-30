@@ -16,7 +16,6 @@ import javafx.stage.Stage;
    private BorderPane primaryBp = new BorderPane();
    private Scene primaryScene = new Scene(primaryBp,260,200);
    Button play = new Button();
-   private MenuBar menuBar = new MenuBar();
    Menu menuFile = new Menu("File");
    private Menu menuSettings = new Menu("Settings");
    private MenuItem chooseDirectory = new MenuItem("Select Music Folder");
@@ -38,6 +37,7 @@ import javafx.stage.Stage;
     }
     void makeWindowElements(ObservableList model){
         new Image(getClass().getResourceAsStream("Play24.gif"));
+        MenuBar menuBar = new MenuBar();
         play.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("Play24.gif"))));
         menuFile.getItems().add(chooseDirectory);
         menuSettings.getItems().add(setBounds);
